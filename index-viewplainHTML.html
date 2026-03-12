@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edad Personas</title>
+</head>
+<body>
+  <script type="module">
+    import Cl_cPromedio from "./dist/controllers/Cl_cPromedio.js";
+    new Cl_cPromedio();
+  </script>
+
+  <section id="promedio">
+    <h2>Edad Personas</h2>
+    
+    <button id="promedio_btAgregar">Agregar Persona</button>
+    
+    <br><br><hr><br>
+
+    <div>
+      La edad promedio es <span id="promedio_lblPromedio">0</span>
+    </div>
+
+    <div>
+      Personas registradas: <span id="promedio_lblRegistros">0</span>
+    </div>
+  </section>
+
+  <section id="persona" hidden>
+    <h3>Procesar Persona</h3>
+    
+    <label>Ingrese la edad:
+      <input type="number" id="persona_inEdad" placeholder="Ej: 15">
+    </label>
+    
+    <br><br>
+    
+    <button id="persona_btCancelar">Cancelar</button>
+    <button id="persona_btAceptar">Aceptar</button>
+  </section>
+
+</body>
+</html>
