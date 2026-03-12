@@ -11,7 +11,7 @@ export default class Cl_vPromedio {
         this.mostrar();
     }
     reportar({ promedio, personas }) {
-        this.lblPromedio.innerText = `${promedio.calcularPromedio()}`;
+        this.lblPromedio.innerText = `${promedio.calcularPromedio().toFixed(2)}`;
         this.lblRegistros.innerHTML = `${promedio.registros()}`;
     }
     mostrar() {
