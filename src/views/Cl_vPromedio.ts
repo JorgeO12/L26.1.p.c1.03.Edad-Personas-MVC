@@ -6,18 +6,22 @@ export default class Cl_vPromedio {
     lblPromedio: HTMLElement;
     btAgregar: HTMLButtonElement;
     lblRegistros: HTMLElement;
+    lblMayorEdad: HTMLElement;
 
     constructor() {
         this.vista = document.getElementById("promedio") as HTMLElement;
         this.lblPromedio = document.getElementById("promedio_lblPromedio") as HTMLElement;
         this.btAgregar = document.getElementById("promedio_btAgregar") as HTMLButtonElement;
         this.lblRegistros = document.getElementById("promedio_lblRegistros") as HTMLElement;
+        this.lblMayorEdad = document.getElementById("promedio_lblMayorEdad") as HTMLElement;
         this.mostrar();
     }
 
     reportar({ promedio, personas }: { promedio: Cl_mPromedio; personas: Cl_mPersonas }): void {
         this.lblPromedio!.innerText = `${promedio.calcularPromedio().toFixed(2)}`;
         this.lblRegistros!.innerHTML = `${promedio.registros()}`;
+        this.lblMayorEdad!.innerHTML = `${promedio.mayoriaEdad()}`;
+        
     }
 
     mostrar(): void {

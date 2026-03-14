@@ -3,16 +3,19 @@ export default class Cl_vPromedio {
     lblPromedio;
     btAgregar;
     lblRegistros;
+    lblMayorEdad;
     constructor() {
         this.vista = document.getElementById("promedio");
         this.lblPromedio = document.getElementById("promedio_lblPromedio");
         this.btAgregar = document.getElementById("promedio_btAgregar");
         this.lblRegistros = document.getElementById("promedio_lblRegistros");
+        this.lblMayorEdad = document.getElementById("promedio_lblMayorEdad");
         this.mostrar();
     }
     reportar({ promedio, personas }) {
         this.lblPromedio.innerText = `${promedio.calcularPromedio().toFixed(2)}`;
         this.lblRegistros.innerHTML = `${promedio.registros()}`;
+        this.lblMayorEdad.innerHTML = `${promedio.mayoriaEdad()}`;
     }
     mostrar() {
         this.vista.hidden = false;
