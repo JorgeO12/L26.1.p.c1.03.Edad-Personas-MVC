@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edad Personas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <script type = "module">   
+        import Cl_cPromedio from "./dist/controllers/Cl_cPromedio.js";
+            new Cl_cPromedio();
+    </script>
+    <div class = "container mt-5">
+        <section id="promedio">
+            <h2>Edad Personas</h2>
+            
+            <button id="promedio_btAgregar" class = "btn btn-primary">Agregar Persona</button>
+            
+            <br><br><hr><br>
+
+            <div>
+                La Edad promedio es <span id="promedio_lblPromedio">0</span>
+            </div>
+
+            <div>
+                Mayores de Edad: <span id="promedio_lblMayorEdad">0</span>
+            </div>
+
+            <div>
+                Personas registradas: <span id="promedio_lblRegistros">0</span>
+            </div>
+        </section>
+
+        <section id="persona" hidden>
+            <h3>Procesar Persona</h3>
+            
+            <label>Ingrese la edad:
+                <input type="number" id="persona_inEdad" placeholder="Ej: 15" class = "form-control">
+            </label>
+            
+            <br><br>
+            
+            <button id="persona_btCancelar" class = "btn btn-secondary">Cancelar</button>
+            <button id="persona_btAceptar" class = "btn btn-success">Aceptar</button>
+        </section>
+    </div>
+</body>
+</html>
